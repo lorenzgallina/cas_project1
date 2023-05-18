@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Todo App</title>
-    <link rel="stylesheet" href="./main.css" />
-  </head>
-  <body>
-    <header>
-    </header>
-
-    <main>
-      <h1>Dies wird irgendwann eine Todo App sein</h1>
-      <h2>Test nummer 2</h2>
-      <input type="checkbox" name="check1" id="1"><label for="check1">Todo nr1</label>
-      <input type="checkbox" name="check2" id="2"><label for="check1">Todo nr2</label>
-      <input type="checkbox" name="check3" id="3"><label for="check1">Todo nr3</label>
-    </main>
-
-    <footer>
-      <p>&copy; LG</p>
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="./main.css" />
+</head>
+<body>
+  <h1>Dies wird irgendwann eine Todo App sein</h1>
+  <h2>Test nummer 2</h2>
+  <input type="checkbox" name="check1" id="1"><label for="check1">Todo nr1</label>
+  <input type="checkbox" name="check2" id="2"><label for="check1">Todo nr2</label>
+  <input type="checkbox" name="check3" id="3"><label for="check1">Todo nr3</label>
+  <br>
+  <ul id="todos"></ul>
+  
+  
+  
+  <script type="module">
+    "use strict";
+    import todosStore from "./todos.js";
+    
+    const todosLiElement = document.querySelector("#todos");
+    
+    function createTodosHtml(todos) {
+      return todos.map(todo => `
+      <li>
+        <h3>
+          ${todo.title}
+        </h3>
+      </li>`).join('');
+    }
+    
+    
+    todosLiElement.innerHTML = createTodosHtml(todosStore.todosSorted());
+  </script>
+  
+  <footer>
+    <p>&copy; LG</p>
+  </footer>
+</body>
 </html>
