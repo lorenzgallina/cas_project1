@@ -9,13 +9,18 @@
   <h1>Dies wird irgendwann eine Todo App sein</h1>
   <h2>Test nummer 2</h2>
   <input type="checkbox" name="check1" id="1"><label for="check1">Todo nr1</label>
-  <input type="checkbox" name="check2" id="2"><label for="check1">Todo nr2</label>
-  <input type="checkbox" name="check3" id="3"><label for="check1">Todo nr3</label>
+  <input type="checkbox" name="check2" id="2"><label for="check2">Todo nr2</label>
+  <input type="checkbox" name="check3" id="3"><label for="check3">Todo nr3</label>
   <br>
   <ul id="todos"></ul>
-  
-  
-  
+  <input id="newTask" type="text" placeholder="Enter new task">
+  <button onclick="addTask()">Add Task</button>
+  <ul id="taskList"></ul>
+  <input id="username" type="text" placeholder="Enter your name">
+  <button onclick="saveToLocalStorage()">Save Name</button>
+  <button onclick="retrieveFromLocalStorage()">Retrieve Name</button>
+  <button onclick="testmyjs()">TestLog</button>
+  <script src="testjs.js"></script>
   <script type="module">
     "use strict";
     import todosStore from "./todos.js";
@@ -30,7 +35,6 @@
         </h3>
       </li>`).join('');
     }
-    
     
     todosLiElement.innerHTML = createTodosHtml(todosStore.todosSorted());
   </script>
