@@ -1,13 +1,3 @@
-let y = 3;
-let x = 3 + y;
-const value = add(x, y);
-(value > 10) ? console.log("Big") : console.log("Small");
-
-function add(a, b) {
-    // debugger;
-    return a + b;
-}
-
 const themeButton = document.getElementById("theme-button");
 
 themeButton.addEventListener("click", () => {
@@ -18,17 +8,6 @@ function saveToLocalStorage() {
     let userName = document.getElementById('username').value;
     localStorage.setItem('userName', userName);
 }
-
-function retrieveFromLocalStorage() {
-    let storedUserName = localStorage.getItem('userName');
-    
-    if(storedUserName) {
-        alert('The stored user name is ' + storedUserName);
-    } else {
-        alert('No user name is stored.');
-    }
-}
-
 
 
 window.onload = function() {

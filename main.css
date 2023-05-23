@@ -2,7 +2,7 @@
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(100, 100, 100);
   }
-  
+
   :root {
     --background: white;
     --color: #222;
@@ -17,6 +17,7 @@
     font-family: Roboto, sans-serif;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     background: var(--background);
     color: var(--color);
   }
