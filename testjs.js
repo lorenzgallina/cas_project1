@@ -8,6 +8,12 @@ function add(a, b) {
     return a + b;
 }
 
+const themeButton = document.getElementById("theme-button");
+
+themeButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+});
+
 function saveToLocalStorage() {
     let userName = document.getElementById('username').value;
     localStorage.setItem('userName', userName);

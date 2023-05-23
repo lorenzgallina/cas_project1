@@ -3,6 +3,24 @@
     color: rgb(100, 100, 100);
   }
   
+  :root {
+    --background: white;
+    --color: #222;
+  }
+  
+  .dark-theme {
+    --background: #222;
+    --color: white;
+  }
+  
+  body {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--background);
+    color: var(--color);
+  }
+  
   h1 {
     font-family: serif;
     display: inline;
