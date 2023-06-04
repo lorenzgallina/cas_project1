@@ -1,0 +1,39 @@
+:root {
+    --background: white;
+    --color: black;
+}
+
+.dark-theme {
+    --background: black;
+    --color: white;
+}
+
+
+body {
+    font-family: Roboto, sans-serif;
+    background: var(--background);
+    color: var(--color);
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container11 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container12 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.notelist > li {
+    color: red;
+}

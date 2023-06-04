@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="./notes.css" />
+</head>
+<body>
+    <h1>Übersicht</h1>
+    <h2>Diese Seite ist noch in Bearbeitung</h2>
+    
+    <div class="container1">
+        <div class="container11">
+            <div>
+                <button onclick="window.location.href='notes_detail.html'">Notiz hinzufügen</button>
+            </div>
+            <div>
+                <button type="button" id="theme-button">Toggle Style</button>
+            </div>
+        </div>
+        <div class="container11"><br>Erstellte Notizen:</div>
+        <div class="container11">
+            <div>
+                <input id="newNote" type="text" placeholder="Suche">
+            </div>
+            <div>
+                <button type="button" id="sort-button">Sort</button>
+            </div>
+        </div>
+        <div class="container12">
+            <ul id="noteList" ></ul>
+        </div>
+    </div>
+    
+
+  
+    <footer>
+        <p>&copy; LG</p>
+    </footer>
+
+    <script src="./services/services.js"></script>
+    <script src="./services/note_service.js"></script>
+    <script src="./services/toggle_service.js"></script>
+</body>
+</html>
