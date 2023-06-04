@@ -20,7 +20,8 @@ function displayNoteList() {
     if (noteList) {
         notes.forEach(function(note) {
             let listItem = document.createElement('li');
-            listItem.textContent = note.note;
+            listItem.innerHTML = `Titel: ${note.note} <br/> Beschreibung: ${note.note_description} <br/> Deadline: ${note.due_date}`;
+            // listItem.textContent = note.note;
             noteList.appendChild(listItem);
         });
     }
@@ -32,8 +33,10 @@ function handleNoteFormSubmission(event) {
     let noteForm = document.getElementById('noteForm');
     if (noteForm) {
         let note = noteForm.note.value;
+        let note_description = noteForm.note_description.value;
+        let due_date = noteForm.due_date.value;
         let notes = getNotesFromLocalStorage();
-        notes.push({note: note});
+        notes.push({note: note, note_description: note_description, due_date: due_date});
         updateLocalStorage(notes);
         window.location.href = 'index.html';
     }
