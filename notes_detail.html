@@ -26,7 +26,9 @@
                     <input type="text" id="note_description" name="note_description"><br>
                     <label for="due_date">Deadline</label><br>
                     <input type="date" id="due_date" name="due_date"><br>
-                    <input type="submit" value="Notiz hinzufügen">
+                    <label for="done">Done:</label>
+                    <input type="checkbox" id="done" name="done">
+                    <input type="submit" value="Notiz hinzufügen" id="noteSubmitButton">
                 </form>
             </div>
         </div>
@@ -39,7 +41,7 @@
     </footer>
 
     <script src="./services/services.js"></script>
-    <script src="./services/note_detail_service.js"></script>
+    <script src="./services/notes_detail_service.js"></script>
     <script src="./services/toggle_service.js"></script>
 </body>
 </html>

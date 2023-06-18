@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+    getNotesFromBackend().then(notes => {
+        displayNoteList(notes);
+    });
+});
+
 // Function to fetch notes from the backend server
 function getNotesFromBackend() {
     return fetch('http://localhost:3000/todos')
@@ -11,20 +17,61 @@ function getNotesFromBackend() {
 }
 
 // Function to display the notes list
-function displayNoteList() {
+function displayNoteList(notes) {
+    let noteList = document.getElementById('noteList');
+    if (noteList) {
+        noteList.innerHTML = '';
+        notes.forEach(function(note) {
+            let listItem = document.createElement('li');
+            listItem.innerHTML = `Titel: ${note.note} <br/> Beschreibung: ${note.note_description} <br/> Deadline: ${note.due_date} <br/> Done: ${note.done ? 'Yes' : 'No'} <br/>`;
+            let editButton = document.createElement('button');
+            editButton.textContent = 'Edit';
+            editButton.onclick = function() {
+                window.location.href = `notes_detail.html?id=${note._id}`;
+            };
+            listItem.appendChild(editButton);
+            noteList.appendChild(listItem);
+        });
+    }
+}
+
+// sort functions
+document.getElementById('sortByName').onclick = function() {
+    sortNotesByName();
+}
+
+document.getElementById('sortByDate').onclick = function() {
+    sortNotesByDate();
+}
+
+document.getElementById('sortByDone').onclick = function() {
+    sortNotesByDone();
+}
+
+function sortNotesByName() {
     getNotesFromBackend()
         .then(notes => {
-            let noteList = document.getElementById('noteList');
-            if (noteList) {
-                notes.forEach(function(note) {
-                    let listItem = document.createElement('li');
-                    listItem.innerHTML = `Titel: ${note.note} <br/> Beschreibung: ${note.note_description} <br/> Deadline: ${note.due_date}`;
-                    noteList.appendChild(listItem);
-                });
-            }
+            notes.sort(function(a, b) {
+                return a.note.localeCompare(b.note);
+            });
+            displayNoteList(notes);
         });
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    displayNoteList();
-});
+function sortNotesByDate() {
+    getNotesFromBackend()
+        .then(notes => {
+            notes.sort(function(a, b) {
+                return new Date(a.due_date) - new Date(b.due_date);
+            });
+            displayNoteList(notes);
+        });
+}
+
+function sortNotesByDone() {
+    getNotesFromBackend()
+        .then(notes => {
+            notes.sort((a, b) => a.done - b.done);
+            displayNoteList(notes);
+        });
+}
