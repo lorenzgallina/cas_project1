@@ -1,45 +1,4 @@
-{"note":"TestNew3456","note_description":"aafafafa","due_date":"","_id":"4kDLicZ2zsCuQnTy"}
-{"note":"Can I reach backend?","note_description":"Test","due_date":"2023-06-23","_id":"AbktlRlVJwBL8kRM"}
-{"note":"afafaf","note_description":"afafaf","due_date":"2023-06-07","_id":"Feg4qE8O6yDPyrkx"}
-{"note":"gsgsg","note_description":"sgsgsg","due_date":"2023-06-23","_id":"FtAf2My33boKUPzK"}
-{"note":"TestNew","note_description":"TestBackend","due_date":"2023-06-15","_id":"I7azAeTs6cSoFecw"}
-{"note":"TestNew","note_description":"TestBackend","due_date":"2023-06-15","_id":"IBXAyIyNmHNuidFY"}
-{"note":"gsgsg","note_description":"sgsgsg","due_date":"2023-06-23","_id":"Rm7R1jgYYEYJ8Gdm"}
-{"note":"fafafaf","note_description":"afafafa","due_date":"2023-06-08","_id":"VU2XIogtAWKBIzw5"}
-{"note":"afafaf","note_description":"afafa","due_date":"2023-06-22","_id":"fCt9niCvwDX2dMNT"}
-{"note":"afafaf","note_description":"afafaf","due_date":"2023-06-07","_id":"kaUdJ4sNDDiADTCo"}
-{"note":"afafaf","note_description":"afafa","due_date":"2023-06-22","_id":"xfEY5hqdpSb3MlSM"}
-{"note":"Neue Notiz","note_description":"Okay","due_date":"2023-05-30","_id":"A7OE10MmFclb627j"}
-{"done":true,"_id":"4kDLicZ2zsCuQnTy"}
-{"done":false,"_id":"4kDLicZ2zsCuQnTy"}
-{"done":true,"_id":"A7OE10MmFclb627j"}
-{"done":false,"_id":"A7OE10MmFclb627j"}
-{"done":true,"_id":"A7OE10MmFclb627j"}
-{"done":false,"_id":"A7OE10MmFclb627j"}
-{"done":true,"_id":"AbktlRlVJwBL8kRM"}
-{"done":false,"_id":"AbktlRlVJwBL8kRM"}
-{"note":"Test Kompleted Button","note_description":"test","due_date":"2023-06-23","_id":"crBnpd8j04NO0uCF"}
-{"done":true,"_id":"crBnpd8j04NO0uCF"}
-{"note":"undefined","note_description":"undefined","due_date":"","done":true,"_id":"4kDLicZ2zsCuQnTy"}
-{"note":"Another Test","note_description":"Lets see","due_date":"2023-06-23","done":false,"_id":"QAjMjvL4K6Wm3DaX"}
-{"note":"Another Test","note_description":"Lets see","due_date":"2023-06-23","done":true,"_id":"QAjMjvL4K6Wm3DaX"}
-{"$$deleted":true,"_id":"4kDLicZ2zsCuQnTy"}
-{"$$deleted":true,"_id":"A7OE10MmFclb627j"}
-{"$$deleted":true,"_id":"AbktlRlVJwBL8kRM"}
-{"$$deleted":true,"_id":"Feg4qE8O6yDPyrkx"}
-{"$$deleted":true,"_id":"FtAf2My33boKUPzK"}
-{"$$deleted":true,"_id":"I7azAeTs6cSoFecw"}
-{"$$deleted":true,"_id":"IBXAyIyNmHNuidFY"}
-{"$$deleted":true,"_id":"QAjMjvL4K6Wm3DaX"}
-{"$$deleted":true,"_id":"Rm7R1jgYYEYJ8Gdm"}
-{"$$deleted":true,"_id":"VU2XIogtAWKBIzw5"}
-{"$$deleted":true,"_id":"crBnpd8j04NO0uCF"}
-{"$$deleted":true,"_id":"kaUdJ4sNDDiADTCo"}
-{"$$deleted":true,"_id":"xfEY5hqdpSb3MlSM"}
-{"$$deleted":true,"_id":"fCt9niCvwDX2dMNT"}
-{"note":"Neue Notiz","note_description":"Hello","due_date":"2023-06-23","done":false,"_id":"jAP9sBw8RUC4GbwX"}
-{"note":"Neue Notiz","note_description":"Hello","due_date":"2023-06-23","done":true,"_id":"jAP9sBw8RUC4GbwX"}
-{"note":"Eine nEue notizu","note_description":"afalnaljsas","due_date":"2023-06-30","done":false,"_id":"9Kb4rYCUgAYQvfZ8"}
-{"note":"AEine nEue notizu","note_description":"afalnaljsas","due_date":"2023-06-30","done":false,"_id":"9Kb4rYCUgAYQvfZ8"}
-{"note":"ZAEine nEue notizu","note_description":"afalnaljsas","due_date":"2023-06-30","done":false,"_id":"9Kb4rYCUgAYQvfZ8"}
+{"note":"ZAEine nEue notizu","note_description":"afalnaljsas","due_date":"2023-06-30","done":true,"_id":"9Kb4rYCUgAYQvfZ8"}
 {"note":"Another Note","note_description":"Another Dollar","due_date":"2023-06-14","done":false,"_id":"iacV36cezPUWEIZJ"}
+{"note":"Neue Notiz","note_description":"Hello","due_date":"2023-06-13","done":true,"_id":"jAP9sBw8RUC4GbwX"}
+{"note":"Neue Notizlanger Text","note_description":" Hier afaf amtesten was passiert bei einem sehr langen text afjal kfh","due_date":"2023-06-05","done":true,"_id":"Bjl783SGqNPxkDRR"}

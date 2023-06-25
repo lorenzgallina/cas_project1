@@ -6,27 +6,24 @@
     <link rel="stylesheet" href="./notes.css" />
 </head>
 <body>
-    <h1>Übersicht</h1>
-    <h2>Diese Seite ist noch in Bearbeitung</h2>
+    <div class="container1">
+        <div class="container12"><h1>Übersicht</h1></div>
+    </div>
     
     <div class="container1">
-        <div class="container11">
+        
+        <div class="container11_lines">
             <div>
                 <button onclick="window.location.href='notes_detail.html'">Notiz hinzufügen</button>
             </div>
             <div>
-                <button type="button" id="theme-button">Toggle Style</button>
-            </div>
-        </div>
-        <div class="container11"><br>Erstellte Notizen:</div>
-        <div class="container11">
-            <div>
-                <input id="newNote" type="text" placeholder="Suche">
-            </div>
-            <div>
+                <div><h2>Erstellte Notizen nach Kriterium Sortieren:</h2></div>
                 <button type="button" id="sortByName">Nach Titel</button>
                 <button type="button" id="sortByDate">Nach Datum</button>
                 <button type="button" id="sortByDone">Nach Done</button>
+            </div>
+            <div>
+                <button type="button" id="theme-button">Toggle Style</button>
             </div>
         </div>
         <div class="container12">

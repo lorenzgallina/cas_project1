@@ -6,10 +6,14 @@
     <link rel="stylesheet" href="./notes.css" />
 </head>
 <body>
-    <h1>Notiz hinzufügen</h1>
+    <div class="container1">
+        <div class="container12">
+            <h1>Notiz hinzufügen/bearbeiten</h1>
+        </div>
+    </div>
     
     <div class="container1">
-        <div class="container11">
+        <div class="container11_lines">
             <div>
                 <button onclick="window.location.href='index.html'">Zurück zur Übersicht</button>
             </div>
@@ -20,15 +24,26 @@
         <div class="container11">
             <div>
                 <form id="noteForm">
-                    <label for="note">Notiz Titel:</label><br>
-                    <input type="text" id="note" name="note"><br>
-                    <label for="note_description">Beschreibung:</label><br>
-                    <input type="text" id="note_description" name="note_description"><br>
-                    <label for="due_date">Deadline</label><br>
-                    <input type="date" id="due_date" name="due_date"><br>
-                    <label for="done">Done:</label>
-                    <input type="checkbox" id="done" name="done">
-                    <input type="submit" value="Notiz hinzufügen" id="noteSubmitButton">
+                    <div class="form-element">
+                        <label for="note">Notiz Titel*:</label>
+                        <input type="text" id="note" name="note" required>
+                    </div>
+                    <div class="form-element">
+                        <label for="note_description">Beschreibung:</label>
+                        <input type="text" id="note_description" name="note_description">
+                    </div>
+                    <div class="form-element">
+                        <label for="due_date">Deadline:</label>
+                        <input type="date" id="due_date" name="due_date">
+                    </div>
+                    <div class="form-element">
+                        <label for="done">Done:</label>
+                        <input type="checkbox" id="done" name="done">
+                    </div>
+                    <div class="form-element">
+                        <input type="submit" value="Notiz hinzufügen" id="noteSubmitButton">
+                    </div>
+                    
                 </form>
             </div>
         </div>

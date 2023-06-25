@@ -4,10 +4,10 @@ let noteInput = document.getElementById('note');
 let noteDescriptionInput = document.getElementById('note_description');
 let dueDateInput = document.getElementById('due_date');
 
-// noteId if editing existing note
+// noteId if existing note otherwise null
 let editingNoteId = null;
 
-// Function to handle the note form submission
+// Function for adding/ updating note
 function handleNoteFormSubmission(event) {
     event.preventDefault();
     let noteForm = document.getElementById('noteForm');

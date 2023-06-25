@@ -23,7 +23,15 @@ function displayNoteList(notes) {
         noteList.innerHTML = '';
         notes.forEach(function(note) {
             let listItem = document.createElement('li');
-            listItem.innerHTML = `Titel: ${note.note} <br/> Beschreibung: ${note.note_description} <br/> Deadline: ${note.due_date} <br/> Done: ${note.done ? 'Yes' : 'No'} <br/>`;
+            listItem.innerHTML = `
+            <span class="label">Titel:</span> 
+            <span class="value">${note.note}</span> 
+            <span class="label">Beschreibung:</span> 
+            <span class="value">${note.note_description}</span> 
+            <span class="label">Deadline:</span> 
+            <span class="value">${note.due_date}</span> 
+            <span class="label">Done:</span> 
+            <span class="value" data-done="${note.done ? 'Yes' : 'No'}">${note.done ? 'Yes' : 'No'}</span>`;
             let editButton = document.createElement('button');
             editButton.textContent = 'Edit';
             editButton.onclick = function() {
