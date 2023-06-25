@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-theme");
+    } else if (savedTheme === "light") {
+        document.body.classList.remove("dark-theme");
+    }
+    
     getNotesFromBackend().then(notes => {
         displayNoteList(notes);
     });
@@ -24,14 +31,19 @@ function displayNoteList(notes) {
         notes.forEach(function(note) {
             let listItem = document.createElement('li');
             listItem.innerHTML = `
-            <span class="label">Titel:</span> 
-            <span class="value">${note.note}</span> 
+            <div class="header">
+                <div>
+                    <span class="label">Titel:</span>
+                    <span class="value">${note.note}</span>
+                </div>
+                <div class="doneStatus">
+                    <span class="label done-status" data-done="${note.done ? 'Yes' : 'No'}">Done: ${note.done ? 'Yes' : 'No'}</span>
+                </div>
+            </div> 
             <span class="label">Beschreibung:</span> 
             <span class="value">${note.note_description}</span> 
             <span class="label">Deadline:</span> 
-            <span class="value">${note.due_date}</span> 
-            <span class="label">Done:</span> 
-            <span class="value" data-done="${note.done ? 'Yes' : 'No'}">${note.done ? 'Yes' : 'No'}</span>`;
+            <span class="value">${note.due_date}</span>`;
             let editButton = document.createElement('button');
             editButton.textContent = 'Edit';
             editButton.onclick = function() {
@@ -81,5 +93,18 @@ function sortNotesByDone() {
         .then(notes => {
             notes.sort((a, b) => a.done - b.done);
             displayNoteList(notes);
+        });
+}
+
+// filter function
+document.getElementById('filterByNotDone').onclick = function() {
+    filterNotesByNotDone();
+}
+
+function filterNotesByNotDone() {
+    getNotesFromBackend()
+        .then(notes => {
+            let filteredNotes = notes.filter(note => !note.done);
+            displayNoteList(filteredNotes);
         });
 }

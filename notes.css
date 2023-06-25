@@ -93,48 +93,7 @@ button:hover {
     width: auto; 
 }
 
-#noteList {
-    list-style-type: none; /* remove bullets from list */
-    padding: 0; /* remove default padding */
-}
 
-#noteList li {
-    border: 1px solid var(--color);
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 100%;
-}
-
-#noteList li button {
-    margin-top: 10px;
-    align-self: flex-end;
-}
-
-.label {
-    font-weight: bold;
-    color: var(--color);
-    display: block;
-}
-
-.value {
-    font-style: italic;
-    color: grey;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.value[data-done="Yes"]::before {
-    content: "✅ ";
-    color: green;
-}
-
-.value[data-done="No"]::before {
-    content: "❌ ";
-    color: red;
-}
 
 h1 {
     font-size: 2em;
@@ -145,4 +104,63 @@ h1 {
 h2 {
     font-size: 1em;
     color: var(--color);
+}
+
+/* Styles for list items */
+
+#noteList {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+#noteList li {
+    border: 1px solid var(--color);
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    position: relative;
+}
+
+.label {
+    font-weight: bold;
+    color: var(--color);
+    display: block;
+    font-size: 0.9em;
+}
+
+.value {
+    color: var(--color);
+    font-size: 1em;
+    font-style: italic;
+}
+
+#noteList li button {
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doneStatus {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px; 
+}
+
+.done-status[data-done="Yes"]::before {
+    content: "✅ ";
+    color: green;
+}
+
+.done-status[data-done="No"]::before {
+    content: "❌ ";
+    color: red;
 }

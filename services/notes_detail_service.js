@@ -59,6 +59,13 @@ window.onload = function() {
     let params = new URLSearchParams(window.location.search);
     editingNoteId = params.get('id'); // Get the note ID from the URL parameter
 
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-theme");
+    } else if (savedTheme === "light") {
+        document.body.classList.remove("dark-theme");
+    }
+
     if (editingNoteId) {
         // If editingNoteId is set, fetch note details from the backend and fill the form
         fetch(`http://localhost:3000/todos/${editingNoteId}`)
