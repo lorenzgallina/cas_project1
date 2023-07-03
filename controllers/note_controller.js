@@ -1,5 +1,8 @@
+import { getNotesFromBackend } from '../services/services.js';
+import { getTheme } from '../services/Localstore_service.js';
+
 document.addEventListener('DOMContentLoaded', (event) => {
-    const savedTheme = localStorage.getItem("theme");
+    const savedTheme = getTheme();
     if (savedTheme === "dark") {
         document.body.classList.add("dark-theme");
     } else if (savedTheme === "light") {
@@ -11,17 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-// Function to fetch notes from the backend server
-function getNotesFromBackend() {
-    return fetch('http://localhost:3000/todos')
-        .then(response => response.json())
-        .then(notes => {
-            return notes;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-}
+
 
 // Function to display the notes list
 function displayNoteList(notes) {
@@ -46,11 +39,19 @@ function displayNoteList(notes) {
             <span class="value">${note.due_date}</span>`;
             let editButton = document.createElement('button');
             editButton.textContent = 'Edit';
-            editButton.onclick = function() {
-                window.location.href = `notes_detail.html?id=${note._id}`;
-            };
+            editButton.dataset.noteId = note._id;
+            
             listItem.appendChild(editButton);
             noteList.appendChild(listItem);
+        });
+        noteList.addEventListener('click', function(event) {
+            if(event.target.tagName === 'BUTTON') {
+                let id = event.target.dataset.noteId;
+        
+                if (event.target.textContent === 'Edit') {
+                    window.location.href = `notes_detail.html?id=${id}`; 
+                }
+            }
         });
     }
 }
